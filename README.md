@@ -5,7 +5,7 @@ This project is a project template which shows how to use STL infrastructure to 
 The whole repo layout:
 
 - frontend, ui components and logic
-- backend, an api server for the frontend
+- [backend](./backend/README.md), an api server for the frontend
 - resources, static assets used for the backend, which can be uploaded to any storage like aws s3
 
 The whole architecture looks like:
@@ -44,8 +44,9 @@ The backend will run the migration scripts automatically when it is starting.
 ### Steps
 
 1. get the api-key for stl-api
-1. deploy `frontend`
-1. deploy `backend`
+1. create the jwt for the frontend
+1. deploy `frontend`, see [README](./frontend/README.md) for details.
+1. deploy `backend`, see [README](./backend/README.md) for details.
 
 ## Dev Notes
 
