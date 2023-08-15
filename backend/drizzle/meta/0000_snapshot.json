@@ -1,0 +1,71 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "5e238ff2-7dcb-43d2-8c8f-070f6e8bf376",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "tickets": {
+      "name": "tickets",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigserial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chain": {
+          "name": "chain",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ticket_id": {
+          "name": "ticket_id",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ticket_link": {
+          "name": "ticket_link",
+          "type": "varchar(800)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "unique_chain_email": {
+          "name": "unique_chain_email",
+          "columns": [
+            "chain",
+            "email"
+          ],
+          "isUnique": true
+        },
+        "unique_chain_ticketId": {
+          "name": "unique_chain_ticketId",
+          "columns": [
+            "chain",
+            "ticket_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
