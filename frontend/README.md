@@ -1,14 +1,21 @@
-# next-template
+# README
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+This is a stand Next.js 13 project.
 
-## Usage
+## How to use
 
 ```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+pnpm install
+cp .env.example .env
 ```
 
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Tailwind CSS class sorting, merging and linting.
+- `NEXT_PUBLIC_BACKEND_BASE` the base url of the backend
+- `NEXT_PUBLIC_JWT` the static JWT token to use for authentication with our backend
+- `NEXT_PUBLIC_CHAIN_ID` the chain id of the chain we are using
+- `NEXT_PUBLIC_SENDER_PUBLIC_KEY` Used for magic link. This will be created automatically if using common api
+
+Then run:
+
+```bash
+npm run dev
+```

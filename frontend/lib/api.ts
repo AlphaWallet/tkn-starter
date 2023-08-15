@@ -7,8 +7,10 @@ const axiosInstance = axios.create({
   headers: { Authorization: `Bearer ${env.NEXT_PUBLIC_JWT}` },
 })
 
-export function register(data: { chain: number; email: string }) {
-  return axiosInstance
-    .post<{ passId: string; email: string }>("/passes", data)
-    .then((v) => v.data)
+export function generatePass(data: { chain: number; email: string }) {
+  return axiosInstance.post("/tickets", data).then((v) => v.data)
+}
+
+export function claimReward(signedToken: string) {
+  return axiosInstance.post("/reward", { signedToken }).then((v) => v.data)
 }
