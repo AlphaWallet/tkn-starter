@@ -15,7 +15,7 @@ export const env = createEnv({
     DB_PORT: z.coerce.number().default(5432),
     DB_USER: z.string().default('test_admin'),
     DB_PASSWORD: z.string().default('admin'),
-    DB_DATABASE: z.string().default('test'),
+    DB_DATABASE: z.string().default('tickets'),
     COMMON_API: z.string().default('http://localhost:3005'),
     PROJECT_API_KEY: z.string(),
     ROOT_URL_PREFIX: z.string().default('http://localhost:3006'),

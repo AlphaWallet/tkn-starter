@@ -1,10 +1,14 @@
-import {createTicket, resendTicket} from './handlers/ticketsActions';
+import {claimReward, createTicket} from './handlers/ticketsActions';
 import {Controller, JwtFilterRule} from './_core/type';
 
 export const controllers: Controller[] = [
   {
     prefix: '/tickets',
-    actions: [createTicket, resendTicket],
+    actions: [createTicket],
+  },
+  {
+    prefix: '/reward',
+    actions: [claimReward],
   },
 ];
 

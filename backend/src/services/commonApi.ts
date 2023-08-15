@@ -19,7 +19,7 @@ export async function createTicketLink(ticketId: string, email: string) {
         devconId: DEVCON_ID,
         ticketId,
         ticketClass: TICKET_CLASS,
-        rootUrl: `${env.ROOT_URL_PREFIX}/ticket`,
+        rootUrl: `${env.ROOT_URL_PREFIX}/pass`,
         ticketType: 'eas',
       },
       {
